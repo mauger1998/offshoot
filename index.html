@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Offshoot Global | High Quality Surfboards</title>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script defer src="index.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,29 +17,31 @@
     <header>
         <div class="header-wrapper">
             <div class="logo-container">
-                <img src="svg/logo-nav.svg" alt="Offshoot Global Logo">
+                <a aria-label="home link" href="index.html"><img src="svg/logo-nav.svg" alt="Offshoot Global Logo"></a>
             </div>
             <nav>
                 <ul>
-                    <a href="index.html">
+                    <a aria-label="Home Link" href="index.html">
                         <li>home</li>
                     </a>
-                    <a href="#why-us">
+                    <a aria-label="Why Us Section" href="#why-us">
                         <li>why us</li>
                     </a>
-                    <a href="#products">
+                    <a aria-label="Product Section" href="#products">
                         <li>products</li>
                     </a>
-                    <a href="#about-us">
+                    <a aria-label="About Us Section" href="#about-us">
                         <li>about us</li>
                     </a>
-                    <a href="#contact">
+                    <a aria-label="Contact Section" href="#contact">
                         <li>contact</li>
                     </a>
-                    <li><button>subscribe</button></li>
+                    <a aria-label="Subscribe to our newsletter" href="#footer">
+                        <li><button>subscribe</button></li>
+                    </a>
                 </ul>
             </nav>
-            <img class="menu" src="svg/menu-svgrepo-com(3).svg" alt="">
+            <img class="menu" src="svg/menu-svgrepo-com(3).svg" alt="Hamburger menu for mobile">
         </div>
     </header>
     <main>
@@ -44,7 +49,10 @@
             <div class="hero-left">
                 <h1>Have Your Day<br>At The Beach</h1>
                 <p>At Offshoot Global we want you to feel comfortable wherever you might be surfing so jump on your board and we will meet you at the beach.</p>
-                <form action="post" style="overflow:visible !important">
+                <form action="https://formsubmit.co/maugthewebdev@gmail.com" method="POST"  style="overflow:visible !important">
+                    <input type="hidden" name="_captcha" value="false">
+
+
                     <label style="overflow:visible !important">
                         <input placeholder="Email" type="text" id="email" name="email">
                         <button class="button">Subscribe</button>
@@ -52,158 +60,167 @@
                   </form>
             </div>
             <div class="hero-right">
-                <img src="svg/hero-blocks.svg" alt="">
-                <img src="svg/hero-dots.svg" alt="">
-                <img src="svg/hero-waves.svg" alt="">
+                <img aria-hidden="true" src="svg/hero-blocks.svg" alt="Background Texture">
+                <img aria-hidden="true" src="svg/hero-dots.svg" alt="Background Texture">
+                <img aria-hidden="true" src="svg/hero-waves.svg" alt="Background Texture">
                 <img class="hero-image" src="images/hero-image.png" alt="An Adult Holding One of Our Surfboards">
             </div>
         </section>
         
     </main>
-    <a href="" id="why-us"></a>
+    <a aria-hidden="true" href="#" id="why-us"></a>
     <section class="second-section"  style="overflow-x:visible">
         <div class="second-section-wrapper"  style="overflow-x:visible">
-            <img class="wave" src="svg/wave.svg" alt="" >
-            <div class="second-section-titles" >
-                <h2>The New Wave of Surfboards</h2>
+            <img aria-hidden="true" class="wave" src="svg/wave.svg" alt="Svg Wave" >
+            <div class="second-section-titles" style="overflow:visible !important" >
+                <h2 class="secondTitleScroll">The New Wave of Surfboards</h2>
             </div>
-            <div class="second-section-cards">
-                <div class="card">
-                    <img src="images/Rectangle 4.jpg" alt="">
-                    <div class="card-text">
-                        <p>Strong</p>
-                        <h3>Long Lasting</h3>
-                        <button>Our Guarentee</button>
+            <div class="second-section-cards" style="overflow:visible !important">
+                <div class="card" style="overflow:visible !important">
+                    <img src="images/Rectangle 4.jpg" alt="Vw Bus at the beach with surfboards on top">
+                    <div class="card-text" style="overflow:visible !important">
+                        <p class="cardScroll">Strong</p>
+                        <h3 class="cardScroll">Long Lasting</h3>
+                        <a aria-label="Values Section" href="#values">
+                            <button class="cardScroll">Our Values</button>
+                        </a>
                     </div>
                 </div>
-                <div class="card">
-                    <img src="images/Rectangle 5.jpg" alt="">
-                    <div class="card-text">
-                        <p>Personalize</p>
-                        <h3>Fully Customiseable</h3>
-                        <button>Our Products</button>
+                <div class="card" style="overflow:visible !important">
+                    <img src="images/Rectangle 5.jpg" alt="People stood on the beach with surfboards">
+                    <div class="card-text" style="overflow:visible !important">
+                        <p class="cardScroll">Personalize</p>
+                        <h3 class="cardScroll">Fully Customiseable</h3>
+                        <a aria-label="Products Section" href="#products"><button class="cardScroll">Our Products</button></a>
                     </div>
                 </div>
-                <div class="card">
-                    <img src="images/Rectangle 6.jpg" alt="">
-                    <div class="card-text">
-                        <p>Adventure</p>
-                        <h3>Experience</h3>
-                        <button>Our Promise</button>
+                <div class="card" style="overflow:visible !important">
+                    <img src="images/Rectangle 6.jpg" alt="Surfboards stacked on a palm tree at the beach">
+                    <div class="card-text" style="overflow:visible !important">
+                        <p class="cardScroll">Adventure</p>
+                        <h3 class="cardScroll">Experience</h3>
+                        <a aria-label="Our Promise Section" href="#final"><button class="cardScroll">Our Promise</button></a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <a href="" id="products"></a>
+
+
+    <a aria-hidden="true" href="#" id="products"></a>
     <section class="third-section"  >
-        <div class="third-section-wrapper"   >
+        <div class="third-section-wrapper"    >
             <div class="product-grid"  style="overflow-x:visible">
-                <div class="left left-one">
-                    <div class="left-title" >
-                        <p>Best Seller</p>
-                        <h4>Windbreaker R26</h4>
+                <div class="left left-one" style="overflow-x:visible">
+                    <div class="left-title" style="overflow-x:visible" >
+                        <p class="productScroll">Best Seller</p>
+                        <h4 class="productScroll">Windbreaker R26</h4>
                     </div>
-                    <p>The newest edition to our vast range of products is this beauty right here. The Windbreaker R26 is a fully customiseable long lasting surfboard, the last board you'll ever need.</p>
-                    <button>Shop More Surfboards</button>
+                    <p class="productScroll">The newest edition to our vast range of products is this beauty right here. The Windbreaker R26 is a fully customiseable long lasting surfboard, the last board you'll ever need.</p>
+                    <a aria-label="Contact Us Button" href="#contact" style="overflow-x:visible"><button class="productScroll">Enquire Now</button></a>
                 </div>
                 <div class="right right-one"  style="overflow-x:visible">
-                    <img src="svg/hero-dots.svg" alt="">
-                    <img src="svg/Group.svg" alt="">
-                    <img src="svg/37.svg" alt="">
-                    <div class="circle"  style="overflow-x:visible">
-                        <img src="images/pngegg (3) 1.png" alt=""  style="overflow-x:visible">
+                    <img aria-hidden="true" src="svg/hero-dots.svg" alt="background texture">
+                    <img aria-hidden="true" src="svg/Group.svg" alt="background texture">
+                    <img aria-hidden="true" src="svg/37.svg" alt="background texture">
+                    <div class="circle circleScroll"  style="overflow-x:visible">
+                        <img class="circleImageScroll" src="images/pngegg (3) 1.png" alt="One of our surfboard products"  style="overflow-x:visible">
                     </div>
                     
                 </div>
-                <div class="left swap left-two">
-                    <div class="left-title">
-                        <p>Best Seller</p>
-                        <h4>Windbreaker R26</h4>
+                <div class="left swap left-two" style="overflow-x:visible">
+                    <div class="left-title" style="overflow-x:visible">
+                        <p class="productScrollOne">Best Seller</p>
+                        <h4 class="productScrollOne">Windbreaker R26</h4>
                     </div>
-                    <p>The newest edition to our vast range of products is this beauty right here. The Windbreaker R26 is a fully customiseable long lasting surfboard, the last board you'll ever need.</p>
-                    <button>Shop More Surfboards</button>
+                    <p class="productScrollOne">The newest edition to our vast range of products is this beauty right here. The Windbreaker R26 is a fully customiseable long lasting surfboard, the last board you'll ever need.</p>
+                    <a aria-label="Contact Us Button" style="overflow-x:visible" href="#contact"><button class="productScrollOne">Ask about these</button></a>
                 </div>
                 <div class="right move right-two"  style="overflow-x:visible">
-                    <img src="svg/hero-dots.svg" alt="">
-                    <img src="svg/Group.svg" alt="">
-                    <img src="svg/20.svg" alt="">
-                    <div class="circle"  style="overflow-x:visible">
-                        <img class="big" src="images/pngegg (4) 1.png" alt="">
+                    <img aria-hidden="true" src="svg/hero-dots.svg" alt="background texture">
+                    <img aria-hidden="true" src="svg/Group.svg" alt="background texture">
+                    <img aria-hidden="true" src="svg/20.svg" alt="background texture">
+                    <div class="circle circleScrollOne"  style="overflow-x:visible">
+                        <img class="big" src="images/pngegg (4) 1.png" alt="One of our surfboards">
                     </div>
                     
                 </div>
-                <div class="left left-three">
-                    <div class="left-title">
-                        <p>Best Seller</p>
-                        <h4>Windbreaker R26</h4>
+                <div class="left left-three" style="overflow-x:visible">
+                    <div class="left-title" style="overflow-x:visible">
+                        <p class="productScrollTwo">Best Seller</p>
+                        <h4 class="productScrollTwo">Windbreaker R26</h4>
                     </div>
-                    <p>The newest edition to our vast range of products is this beauty right here. The Windbreaker R26 is a fully customiseable long lasting surfboard, the last board you'll ever need.</p>
-                    <button>Shop More Surfboards</button>
+                    <p class="productScrollTwo">The newest edition to our vast range of products is this beauty right here. The Windbreaker R26 is a fully customiseable long lasting surfboard, the last board you'll ever need.</p>
+                    <a aria-label="contact us button" style="overflow-x:visible" href="#contact"><button class="productScrollTwo">Order One</button></a>
                 </div>
                 <div class="right right-three next"  style="overflow-x:visible">
-                    <img src="svg/hero-dots.svg" alt="">
-                    <img src="svg/Group.svg" alt="">
-                    <img src="svg/46.svg" alt="">
-                    <div class="circle"  style="overflow-x:visible">
-                        <img class="bigone" src="images/kisspng-surfboard-clip-art-surfing-transparency-portable-n-5d179f41313537 1.png" alt="">
+                    <img aria-hidden="true" src="svg/hero-dots.svg" alt="background texture">
+                    <img aria-hidden="true" src="svg/Group.svg" alt="background texture">
+                    <img aria-hidden="true" src="svg/46.svg" alt="background texture">
+                    <div class="circle circleScrollTwo"  style="overflow-x:visible">
+                        <img class="bigone" src="images/kisspng-surfboard-clip-art-surfing-transparency-portable-n-5d179f41313537 1.png" alt="One of our awesome surfboards">
                     </div>
                     
                 </div>
             </div>
         </div>
     </section>
-    <a href="" id="about-us"></a>
+
+
+    <a aria-hidden="true" href="#" id="about-us"></a>
     <section class="about-section">
         <div class="about-wrapper">
-            <div class="left-about">
-                <div class="left-about-titles">
-                    <p>Profile</p>
-                    <h2>About<br> Us</h2>
+            <div class="left-about" style="overflow-x:visible">
+                <div class="left-about-titles" style="overflow-x:visible">
+                    <p class="aboutScroll">Profile</p>
+                    <h2 class="aboutScroll">About<br> Us</h2>
                 </div>
-                <p>We believe that when your surfing you must be at one with the waves, here you can learn more about us as a company and why we do this. </p>
-                <button>Our Newsletter</button>
+                <p class="aboutScroll">We believe that when your surfing you must be at one with the waves, here you can learn more about us as a company and why we do this. </p>
+                <a style="overflow-x:visible" href="#footer"><button class="aboutScroll">Our Newsletter</button></a>
             </div>
             <div class="right-about">
-                <img src="images/Group 12.png" alt="">
+                <img src="images/Group 12.png" alt="Surfing on waves">
             </div>
         </div>
     </section>
+    <a aria-hidden="true" href="#" id="values"></a>
     <section class="values-section">
         <div class="values-wrapper">
             <div class="left-values">
-                <img src="images/Group 13.png" alt="">
+                <img src="images/Group 13.png" alt="walking with a surfboard on the beach">
             </div>
-            <div class="right-values">
-                <p>At Offshoot Global we really are global. We are in 28 countries around the world and we are in talks with 6 more to begin our services there. Whenever we release a product we handle it the same way we handle everything, based on our values. We have been in busines 5 years and we have always been known by our customers to have an outstanding product.</p>
-                <p>Like we said, it really all comes down to one thing...</p>
-                <h2>Our <br> Values</h2>
+            <div class="right-values" style="overflow-x:visible">
+                <p class="valueScroll">At Offshoot Global we really are global. We are in 28 countries around the world and we are in talks with 6 more to begin our services there. Whenever we release a product we handle it the same way we handle everything, based on our values. We have been in busines 5 years and we have always been known by our customers to have an outstanding product.</p>
+                <p class="valueScroll">Like we said, it really all comes down to one thing...</p>
+                <h2 class="valueScroll">Our <br> Values</h2>
             </div>
         </div>
     </section>
+    <a aria-hidden="true" href="#" id="final"></a>
     <section class="final-section">
         <div class="final-section-wrapper">
-            <div class="left-final">
-                <p>We have always believed in values and we think it is especially important as a company. We believe you attract what you put out so we always treat our customers like family and in turn they treat us the same. </p>
-                <p>Why should you not be able to be comfortable while you're surfing? We believe you shouldn't have to make that sacrifice for something you love and that is why all our boards are made to be comfy and not destroy your feet.</p>
-                <button>Shop Now</button>
+            <div class="left-final" style="overflow-x:visible">
+                <p class="finalScroll">We have always believed in values and we think it is especially important as a company. We believe you attract what you put out so we always treat our customers like family and in turn they treat us the same. </p>
+                <p class="finalScroll">Why should you not be able to be comfortable while you're surfing? We believe you shouldn't have to make that sacrifice for something you love and that is why all our boards are made to be comfy and not destroy your feet.</p>
+                <a style="overflow-x:visible" href="#products"><button class="finalScroll">Shop Now</button></a>
             </div>
             <div class="right-final">
-                <img src="images/Group 14.png" alt="">
+                <img src="images/Group 14.png" alt="inflatebale flamingo flotaing on the calm sea">
             </div>
         </div>
     </section>
-    <a href="" id="contact"></a>
+    <a aria-hidden="true" href="#" id="contact"></a>
     <section class="contact-section" style="overflow-x:visible">
         <div class="contact-section-wrapper">
             <div class="contact-titles">
-                <h2>We've been waiting to hear from you</h2>
-                <p>Get in touch now if you have any questions regarding the product or if you just want to say hello. We are excited to be able to help you and we cant wait to hear from you. What are you waiting for?</p>
+                <h2 class="contactScroll">We've been waiting to hear from you</h2>
+                <p class="contactScroll">Get in touch now if you have any questions regarding the product or if you just want to say hello. We are excited to be able to help you and we cant wait to hear from you. What are you waiting for?</p>
             </div>
             <div class="circle"  style="overflow-x:visible">
-                <img class="contact-arrow" src="svg/20.svg" alt="">
+                <img class="contact-arrow" src="svg/20.svg" aria-hidden="true" alt="background-texture">
                 <h3>Send Us a Message</h3>
-                <form action="post"  style="overflow-x:visible">
+                <form method="POST" action="https://formsubmit.co/maugthewebdev@gmail.com"  style="overflow-x:visible">
+                    <input type="hidden" name="_captcha" value="false">
                     <fieldset  style="overflow-x:visible">
                         <label for="name">Full Name</label>
                         <input id="name" name="name" type="text">
@@ -220,15 +237,16 @@
                         <button type="submit">Submit</button>
                     </fieldset>
                 </form>
-                <img src="svg/hero-dots.svg" alt="" class="dots">
+                <img aria-hidden="true" src="svg/hero-dots.svg" alt="background texture"# class="dots">
             </div>
         </div>
     </section>
+    <a aria-hidden="true" href="#" id="footer"></a>
     <footer>
         <div class="footer-wrapper">
             <div class="footer-top">
                 <div class="footer-top-left">
-                    <img src="svg/logo-nav.svg" alt="">
+                    <a aria-label="home link" href="index.html"><img src="svg/logo-nav.svg" alt="Offshoot Global Logo"></a>
                     <div class="address">
                         <p>The Beach</p>
                         <p>Bikini Bottom</p>
@@ -248,10 +266,13 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <form action="post">
+                <form action="https://formsubmit.co/maugthewebdev@gmail.com" method="POST">
+                    <input type="hidden" name="_captcha" value="false">
+
+
                     <label>
                         <input placeholder="Email" type="text" id="email" name="email">
-                        <button class="button">Subscribe</button>
+                        <button  class="button">Subscribe</button>
                     </label>
                   </form>
                   <div class="small-links">

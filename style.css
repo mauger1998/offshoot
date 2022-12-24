@@ -1328,3 +1328,82 @@ a {
     text-decoration:none;
     color:black;
 }
+/******************/
+.secondTitleScroll {
+    transform:translateY(100%);
+    opacity:0;
+}
+.card img {
+    transform:translateX(100%);
+    opacity:0;
+}
+.cardScroll {
+    transform: translateY(100%);
+    opacity:0;
+}
+.productScroll {
+    transform:translateX(-100%);
+    opacity:0;
+}
+.productScrollOne {
+    transform:translateX(100%);
+    opacity:0;
+}
+.productScrollTwo {
+    transform:translateX(-100%);
+    opacity:0;
+}
+.circleScroll {
+    transform:translateX(100%);
+    opacity:0;
+}
+.circleScrollOne {
+    transform:translateX(-100%);
+    opacity:0;
+}
+.circleScrollTwo {
+    transform:translateX(100%);
+    opacity:0;
+}
+.aboutScroll {
+    transform:translateX(-100%);
+    opacity:0;
+}
+.right-about {
+    transform:translateX(100%);
+    opacity:0;
+}
+.left-values {
+    transform:translateX(-100%);
+    opacity:0;
+}
+.valueScroll {
+    transform:translateX(100%);
+    opacity:0;
+}
+.finalScroll {
+    transform:translateX(-100%);
+    opacity:0;
+}
+.right-final {
+    transform:translateX(100%);
+    opacity:0;
+}
+.contactScroll {
+    transform:translateX(100%);
+    opacity:0;
+}
+.contact-section form {
+    transform:scale(0.1);
+    opacity:0;
+}
+/*********************/
+button {
+    cursor:pointer;
+    transition:0.5s;
+
+}
+button:hover {
+    transition:0.5s;
+    background-color:#ffd979;
+}
