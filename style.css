@@ -308,9 +308,9 @@ main {
         font-size:2.5rem;
     }
     .hero-left label > input[type="text"] {
-        width:200px;
-        margin-top:2rem;
+        width:175px;
     }
+    
     
 }
 @media (max-width:381px) {
@@ -327,7 +327,6 @@ main {
     }
     .hero-left label > input[type="text"] {
         width:175px;
-        margin-top:2rem;
         height:40px;
     }
     .button {
@@ -964,9 +963,7 @@ main {
     width:50%;
     padding-right:6rem;
 }
-.right-final img {
-    /* width:100%; */
-}
+
 .right-final {
     width:50%;
     display:grid;
@@ -981,6 +978,7 @@ main {
     border-radius:2rem;
     font-weight:bold;
     background-color:var(--dark-orange);
+    align-self:center;
 }
 @media (max-width:1125px) {
     .final-section-wrapper {
@@ -997,6 +995,7 @@ main {
         text-align:center;
         padding:0;
         width:100%;
+        align-items:center;
     }
     .left-final button {
         align-self:center;
