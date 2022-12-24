@@ -33,12 +33,24 @@ body {
            Input
                 ***********************/
 
-.hero-section label {
+.hero-wrapper label {
     display:flex;
     align-items: center;
     gap:0;
     width:max-content !important;
     margin-top:2rem;
+    animation:grow-in 1s ease forwards;
+    transform:translateY(100%);
+    transform-origin:left;
+    opacity:0;
+    animation-delay:1.25s;
+}
+@keyframes grow-in {
+    to {
+        transform:translateY(0);
+        transform-origin:left;
+        opacity:1;
+    }
 }
 label > input[type="text"] {
     padding-right:50px;
@@ -135,12 +147,7 @@ nav ul li {
 
 /*Main*/
 
-/* .hero-wrapper > * {
-    overflow:hidden;
-}
-.second-section > * {
-    overflow-x:hidden;
-} */
+
 
 main {
     width:100%;
@@ -194,10 +201,17 @@ main {
 }
 .hero-left h1 {
     font-size:4rem;
+    transform:translateY(100%);
+    opacity:0;
+    animation:grow-in 1s ease forwards;
 }
 .hero-left p {
     line-height:1.75;
     width:65%;
+    transform:translateY(100%);
+    opacity:0;
+    animation:grow-in 1s ease forwards;
+    animation-delay:0.5s;
 }
 .hero-left {
     padding-block:8rem;
@@ -1308,4 +1322,9 @@ footer {
     .footer-bottom p {
         text-align:center;
     }
+}
+
+a {
+    text-decoration:none;
+    color:black;
 }
