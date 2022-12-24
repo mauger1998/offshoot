@@ -20,6 +20,14 @@
 
 button {
     color:black;
+    
+}
+.drop-down button {
+    background-color:var(--light-orange);
+    padding:0.5rem 1rem;
+    border-radius:2rem;
+    border:2px solid black;
+    font-weight:700;
 }
 /***********
            Body
@@ -117,6 +125,47 @@ nav ul li {
     width:50px;
     display:none;
 }
+.header-wrapper {
+    position:relative !important;
+}
+.drop-down {
+    position:absolute;
+    bottom:-545%;
+    right:0%;
+    background-color:var(--dark-orange);
+    padding:6rem;
+    font-weight:700;
+    transform:translateY(-50%);
+    opacity:0;
+    transition:0.5s;
+    pointer-events:none;
+    border:3px solid black;
+}
+
+.menu {
+    cursor:pointer;
+    z-index:100000;
+}
+.drop-down ul {
+    display:flex;
+    flex-direction:column;
+    align-items: flex-start;
+    gap:4rem;
+}
+.dropDown {
+    transform:translateY(0);
+    opacity:1 ;
+    transition:0.5s;
+    pointer-events:all;
+
+}
+@media (max-width:330px) {
+    .drop-down {
+        padding:4rem;
+        bottom:-570%
+    }
+}
+
 @media (max-width:1176px) {
     nav {
         display:none;
@@ -558,12 +607,12 @@ main {
 .right > img {
     position:absolute;
     width:100px;
-    z-index:2;
+    z-index:1;
 }
 .right > img:nth-of-type(1) {
     position:absolute;
     width:80px;
-    z-index:2;
+    z-index:1;
     top:5%;
     right:10%;
     transform:rotateZ(45deg)
@@ -571,7 +620,7 @@ main {
 .right > img:nth-of-type(2) {
     position:absolute;
     width:100px;
-    z-index:2;
+    z-index:;
     bottom:10%;
     left:10%;
 }
@@ -1405,4 +1454,10 @@ button {
 button:hover {
     transition:0.5s;
     background-color:#ffd979;
+}
+.test {
+    z-index:-1 !important;
+}
+.drop-down {
+    z-index:3 !important;
 }

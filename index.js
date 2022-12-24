@@ -203,3 +203,10 @@ gsap.to(".contact-section form", {
     opacity:1,
     stagger:0.3,
 })
+/**********************/
+const menu = document.querySelector(".menu")
+const dropDown = document.querySelector(".drop-down")
+
+menu.addEventListener("click", (e) => {
+    dropDown.classList.toggle("dropDown")
+})
